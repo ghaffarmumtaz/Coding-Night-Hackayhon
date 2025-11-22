@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Social Feed — Frontend Only</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- App container -->
+  <div id="app">
+
+    <!-- AUTH VIEW -->
+    <main id="authView" class="card center">
+      <h1>Mini Social</h1>
+      <div class="auth-container">
+        <div class="tabs">
+          <button id="tabSignIn" class="tab active">Login</button>
+          <button id="tabSignUp" class="tab">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="form">
+          <label>Email
+            <input type="email" id="loginEmail" required />
+          </label>
+          <label>Password
+            <input type="password" id="loginPassword" required />
+          </label>
+          <button type="submit" class="btn primary">Login</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="form hidden">
+          <label>Name
+            <input type="text" id="signupName" required />
+          </label>
+          <label>Email
+            <input type="email" id="signupEmail" required />
+          </label>
+          <label>Password
+            <input type="password" id="signupPassword" required />
+          </label>
+          <button type="submit" class="btn primary">Create Account</button>
+        </form>
+
+        <p class="muted">This is frontend-only demo. Credentials saved in browser storage.</p>
+      </div>
+    </main>
+
+    <!-- FEED VIEW -->
+    <main id="feedView" class="hidden">
+      <!-- Header -->
+      <header class="topbar">
+        <div class="left">
+          <h2>Mini Social</h2>
+          <div class="welcome">Welcome, <span id="welcomeName"></span></div>
+        </div>
+        <div class="right">
+          <button id="themeToggle" class="icon-btn" title="Toggle theme">🌗</button>
+          <button id="logoutBtn" class="btn danger">Logout</button>
+        </div>
+      </header>
+
+      <!-- Controls -->
+      <section class="controls card">
+        <div class="control-row">
+          <input id="searchInput" placeholder="Search posts..." />
+          <select id="sortSelect">
+            <option value="latest">Latest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="mostLiked">Most Liked</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Create Post -->
+      <section class="card create-post">
+        <h3>Create Post</h3>
+        <div class="create-grid">
+          <textarea id="postText" placeholder="What's happening?" rows="3"></textarea>
+          <input id="postImage" placeholder="Image URL (optional)" />
+          <div class="emoji-row">
+            <span>Emoji:</span>
+            <div class="emoji-picker" id="emojiPicker">
+              <button class="emoji">😀</button>
+              <button class="emoji">😅</button>
+              <button class="emoji">😍</button>
+              <button class="emoji">😠</button>
+              <button class="emoji">👍</button>
+              <button class="emoji">🔥</button>
+            </div>
+          </div>
+          <div class="post-actions">
+            <button id="postBtn" class="btn primary">Post</button>
+            <label class="muted">Preview:
+              <span id="previewHint" class="muted small">No image</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feed -->
+      <section id="feed" class="feed"></section>
+
+      <!-- Edit Modal -->
+      <div id="editModal" class="modal hidden" style="display: none;">
+        <div class="modal-card">
+          <h3>Edit Post</h3>
+          <textarea id="editText" rows="4"></textarea>
+          <input id="editImage" placeholder="Image URL (optional)" />
+          <div class="modal-actions">
+            <button id="saveEdit" class="btn primary">Save</button>
+            <button id="cancelEdit" class="btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
