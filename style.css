@@ -346,10 +346,36 @@ html,
     }
 
     .topbar {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+        width: 70% !important;
+        overflow: hidden;
     }
+
+    #loginForm{
+                display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 70% !important;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .tabs{
+       width: 70% !important; 
+       margin: 0 auto;
+    }
+
+  
+
+
+
+     .topbar input {
+        width: 20% !important;
+     }
 
     .control-row {
         flex-direction: column;
