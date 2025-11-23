@@ -344,7 +344,15 @@ html,
     .auth-container {
         width: 92vw;
     }
-
+    .right{
+        width: 100%;
+        position: relative;
+        left: 60%;
+        top: 2%;
+    }
+  #left{
+    text-align: center;
+  }
     .topbar {
         flex-direction: column;
         align-items: flex-start;
