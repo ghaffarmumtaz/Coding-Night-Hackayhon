@@ -192,7 +192,7 @@ function renderFeed(){
         </div>
         <div>${post.content||''}</div>
         ${post.image?`<img src="${post.image}" style="max-width:100%; display:block; margin:8px 0;">`:''}
-        <button class="likeBtn" style="width:7%;">${post.likedBy.includes(currentUser?.email)?'❤️':'🤍'} (${post.likes})</button>
+        <button class="likeBtn" style="width:12%;">${post.likedBy.includes(currentUser?.email)?'❤️':'🤍'} (${post.likes})</button>
         `;
 
         const likeBtn = el.querySelector('.likeBtn');
