@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mini Social Feed — Frontend Only</title>
+  <title>Mini Social Media App</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!--Font Awesome Link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <!-- App container -->
@@ -44,7 +47,6 @@
           <button type="submit" class="btn primary">Create Account</button>
         </form>
 
-        <p class="muted">This is frontend-only demo. Credentials saved in browser storage.</p>
       </div>
     </main>
 
@@ -57,7 +59,7 @@
           <div class="welcome">Welcome, <span id="welcomeName"></span></div>
         </div>
         <div class="right">
-          <button id="themeToggle" class="icon-btn" title="Toggle theme">🌗</button>
+          <button id="themeToggle" class="icon-btn" title="Toggle theme"><i class="fa-solid fa-toggle-on"></i></button>
           <button id="logoutBtn" class="btn danger">Logout</button>
         </div>
       </header>
@@ -78,8 +80,8 @@
       <section class="card create-post">
         <h3>Create Post</h3>
         <div class="create-grid">
-          <textarea id="postText" placeholder="What's happening?" rows="3"></textarea>
-          <input id="postImage" placeholder="Image URL (optional)" />
+          <textarea id="postText" placeholder="Create a Post." rows="3"></textarea>
+          <input type="text" id ="postImage" placeholder="Image URL." />
           <div class="emoji-row">
             <span>Emoji:</span>
             <div class="emoji-picker" id="emojiPicker">
@@ -108,7 +110,7 @@
         <div class="modal-card">
           <h3>Edit Post</h3>
           <textarea id="editText" rows="4"></textarea>
-          <input id="editImage" placeholder="Image URL (optional)" />
+          <input type="text" id="editImage" placeholder="Image URL" />
           <div class="modal-actions">
             <button id="saveEdit" class="btn primary">Save</button>
             <button id="cancelEdit" class="btn">Cancel</button>
@@ -118,6 +120,8 @@
 
     </main>
   </div>
+
+
 
   <script src="script.js"></script>
 </body>
