@@ -44,6 +44,10 @@ function uid() { return Date.now().toString(36) + Math.random().toString(36).sli
 function formatDate(iso) { return new Date(iso).toLocaleString(); }
 
 // ----------------- Auth -----------------
+
+authView.style.display = 'flex';
+authView.style.flexDirection = 'column';
+
 // Switch tabs
 tabSignIn.addEventListener('click', ()=>{
     tabSignIn.classList.add('active');
