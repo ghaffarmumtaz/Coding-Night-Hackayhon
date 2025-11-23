@@ -77,6 +77,7 @@ signupForm.addEventListener('submit', e=>{
     alert('Account created. Login now.');
     signupForm.reset();
     tabSignIn.click();
+    authView.style.display = 'none';
     showFeed();
 });
 
@@ -90,6 +91,9 @@ loginForm.addEventListener('submit', e=>{
 
     currentUser = user;
     localStorage.setItem('ms_currentUser', JSON.stringify(currentUser));
+    
+authView.style.display = 'none';
+
     showFeed();
 });
 
